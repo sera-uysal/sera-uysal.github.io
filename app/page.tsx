@@ -6,7 +6,7 @@ import PageWrapper from '@/components/Template/PageWrapper';
 import { createPageMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = createPageMetadata({
-  title: 'Resume',
+  title: 'Sera Uysal',
   description: "M.Sc. Economics (LMU)"
 });
 
