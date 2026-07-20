@@ -1,7 +1,28 @@
+/* Home page: main fills available space and centers the hero.
+   The section provides its own padding, so drop page-main's vertical
+   padding here to avoid stacking and overflowing the viewport. */
+.page-main--home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .section {
   position: relative;
-  padding: 6rem 2rem 5rem;
+  padding: 4rem 2rem;
   text-align: center;
+}
+
+/* The tagline is an empty placeholder (only a <br>); collapse it so it
+   doesn't reserve a line-box + margin of dead space. */
+.page-main--home .tagline {
+  margin: 0;
+}
+.page-main--home .tagline:empty,
+.page-main--home .tagline:has(> br:only-child) {
+  display: none;
 }
 
 .content {

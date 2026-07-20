@@ -13,12 +13,16 @@
 }
 
 .about-header {
-  margin-bottom: var(--spacing-8);
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 .about-header .page-title {
-  margin-bottom: 0;
-  letter-spacing: -0.04em;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: var(--font-weight-black);
+  letter-spacing: var(--tracking-tight);
+  margin-bottom: 1.25rem;
+  color: var(--color-fg-bold);
   text-wrap: balance;
 }
 
@@ -166,12 +170,21 @@
 .contact-page {
   max-width: 880px;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: calc(100vh - var(--header-height) - 16rem);
   margin: 0 auto;
   padding: 2rem;
+}
+
+/* Contact main: flex column so .contact-page can fill and center.
+   Drop vertical padding here since .contact-page provides its own. */
+.page-main--contact {
+  display: flex;
+  flex-direction: column;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .contact-header {
@@ -314,10 +327,6 @@
     scroll-margin-top: calc(var(--header-height-mobile) + var(--spacing-6));
     padding-top: var(--spacing-4);
     font-size: 1.25rem;
-  }
-
-  .contact-page {
-    min-height: calc(100vh - var(--header-height-mobile) - 12rem);
   }
 
   .contact-email-link {

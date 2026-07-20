@@ -14,11 +14,6 @@ export default function Hero() {
           <span className="name">Sera Uysal</span>
         </h1>
 
-        <p className="tagline">
-          {/*TODO*/}
-          <br />
-        </p>
-
         <div className="chips">
           <span className="chip">M.Sc. Economics (LMU)</span>
           <span className="chip">CFA Level I</span>
