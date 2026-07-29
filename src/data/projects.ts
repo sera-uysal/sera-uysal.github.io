@@ -15,8 +15,18 @@ const data: Project[] = [
     subtitle: 'Applied Business Intelligence & Financial Analytics Project',
     link: '/documents/projects/mbs_loan_trade_execution_analysis.pdf',
     image: '/images/projects/mbs_loan_trade_execution_analysis_thumbnail.png',
-    desc: 'Executed a $336.6M whole-loan pool analysis for agency MBS execution. Achieved a 7.07% profit margin, surpassing the target by 2.07 points. Developed interactive dashboards to visualize key metrics and support trading strategies.',
+    desc: 'Executed a $336.6M whole-loan pool analysis for agency MBS execution. Achieved a 7.07% profit margin, surpassing the target by 2.07 points. Developed Power BI dashboard to visualize key metrics and support trading strategies.',
     tech: ['Power BI', 'Data Visualization'],
+    featured: true,
+    type: 'applied'
+  },
+  {
+    title: 'Global Tech Layoffs — SQL Pipeline & Tableau Dashboard',
+    subtitle: 'Applied Business Intelligence & Financial Analytics Project',
+    link: 'https://public.tableau.com/views/GlobalTechLayoffs2020-2023/Dashboard',
+    image: '/images/projects/layoffs_thumbnail.png',
+    desc: 'End-to-end SQL analytics pipeline in MySQL, transforming publicly-reported tech-layoff events (2020–2023) into a governed, quality-audited dataset. Surfaced the findings in an Tableau dashboard covering the monthly trend, an industry Pareto, funding-stage risk and top movers by year — showing that three months drove 45.6% of all cuts and that early-stage firms failed while late-stage firms downsized.',
+    tech: ['Tableau', 'SQL', 'Data Visualization'],
     featured: true,
     type: 'applied'
   },

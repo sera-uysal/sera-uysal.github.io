@@ -42,14 +42,35 @@ function DocumentIcon() {
   );
 }
 
+function TableauIcon() {
+    return (
+        <svg
+            className="project-card-cta-icon"
+            viewBox="0 0 16 16"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="1.2"
+            strokeLinecap="round"
+            aria-hidden="true"
+        >
+            <path d="M8 1v14M1 8h14M4.5 4v8M11.5 4v8M8 4.5v7" />
+        </svg>
+    );
+}
+
 export default function Cell({ data }: CellProps) {
   const { title, subtitle, link, image, desc, tech, featured } = data;
 
   const hasLink = Boolean(link);
   const isPdf = link?.endsWith('.pdf');
-  const ctaLabel = isPdf ? 'View PDF' : 'View on GitHub';
+  const isTableau= link?.includes('tableau');
+  const isGithub= link?.includes('github');
+  const label = isPdf ? 'View PDF' : isTableau ? 'View in Tableau Public' : 'View on GitHub';
+  const icon = isPdf ? <DocumentIcon /> : isTableau ? <TableauIcon /> : <GitHubIcon />;
 
-  const cardContent = (
+    const cardContent = (
     <>
       {image && (
         <div className="project-card-image">
@@ -84,8 +105,8 @@ export default function Cell({ data }: CellProps) {
 
         {hasLink && (
           <span className="project-card-cta">
-            {isPdf ? <DocumentIcon /> : <GitHubIcon />}
-            {ctaLabel}
+            {icon}
+            {label}
             <span className="project-card-cta-arrow" aria-hidden="true">
               →
             </span>
