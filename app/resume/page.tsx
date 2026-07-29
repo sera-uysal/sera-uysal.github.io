@@ -3,10 +3,12 @@ import type { Metadata } from 'next';
 import Education from '@/components/Resume/Education';
 import Experience from '@/components/Resume/Experience';
 import References from '@/components/Resume/References';
+import Projects from '@/components/Resume/Projects';
 import ResumeNav from '@/components/Resume/ResumeNav';
 import Skills from '@/components/Resume/Skills';
 import PageWrapper from '@/components/Template/PageWrapper';
 import degrees from '@/data/resume/degrees';
+import certifications from '@/data/resume/certifications';
 import { categories, skills } from '@/data/resume/skills';
 import work from '@/data/resume/work';
 import { createPageMetadata } from '@/lib/metadata';
@@ -26,31 +28,34 @@ export default function ResumePage() {
           <p className="resume-summary">
             M.Sc. Economics from <a href="https://www.econ.lmu.de/" target="_blank" rel="noreferrer">LMU Munich </a>
             and CFA Level I. I combine solid financial and macro-financial literacy with hands-on analytical
-            tooling like Excel, Power BI, SQL, Python, and R. I have 4+ years of international
-            experience delivering decision-ready analysis and coordinating cross-functional
+            tools. I have 4+ years of international experience delivering decision-ready analysis and coordinating cross-functional
             financial workstreams. <br/>Authorized to work full-time in Germany.
           </p>
         </header>
 
         <ResumeNav />
 
-        <div className="resume-content">
-          <section id="experience" className="resume-section">
-            <Experience data={work} />
-          </section>
+          <div className="resume-content">
+              <section id="experience" className="resume-section">
+                  <Experience data={work}/>
+              </section>
 
-          <section id="education" className="resume-section">
-            <Education data={degrees} />
-          </section>
+              <section id="education" className="resume-section">
+                  <Education data={degrees} certifications={certifications} />
+              </section>
 
-          <section id="skills" className="resume-section">
-            <Skills skills={skills} categories={categories} />
-          </section>
+              <section id="skills" className="resume-section">
+                  <Skills skills={skills} categories={categories}/>
+              </section>
 
-          <section id="references" className="resume-section">
-            <References />
-          </section>
-        </div>
+              <section id="projects" className="resume-section">
+                  <Projects/>
+              </section>
+
+              <section id="references" className="resume-section">
+                  <References/>
+              </section>
+          </div>
       </section>
     </PageWrapper>
   );

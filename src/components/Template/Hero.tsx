@@ -27,6 +27,8 @@ export default function Hero() {
           <Link href="/resume" className="button button-secondary">
             View Resume
           </Link>
+            My Projects
+          </Link>
         </div>
       </div>
 

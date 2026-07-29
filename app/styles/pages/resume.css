@@ -21,23 +21,25 @@
 .resume-page .experience .title,
 .resume-page .skills .title,
 .resume-page .courses .title,
+.resume-page .projects .title,
 .resume-page .references .title {
-  margin-bottom: 2.5rem;
-  text-align: center;
+    margin-bottom: 2.5rem;
+    text-align: center;
 }
 
 .resume-page .education .title h3,
 .resume-page .experience .title h3,
 .resume-page .skills .title h3,
 .resume-page .courses .title h3,
+.resume-page .projects .title h3,
 .resume-page .references .title h3 {
-  font-size: var(--text-3xl);
-  font-weight: var(--font-weight-black);
-  letter-spacing: var(--tracking-tight);
-  color: var(--color-fg-bold);
-  display: inline-block;
-  padding-bottom: 0.75rem;
-  border-bottom: 3px solid var(--color-accent);
+    font-size: var(--text-3xl);
+    font-weight: var(--font-weight-black);
+    letter-spacing: var(--tracking-tight);
+    color: var(--color-fg-bold);
+    display: inline-block;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid var(--color-accent);
 }
 
 .resume-page .skills {
@@ -172,4 +174,16 @@
 .resume-section:first-child {
   border-top: none;
   padding-top: 0;
+}
+
+.resume-page .certifications-title {
+    width: fit-content;
+    margin: 3rem 0 1.25rem;
+    padding-bottom: 0.35rem;
+    font-size: var(--text-sm);
+    font-weight: var(--font-weight-bold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-fg-light);
+    border-bottom: 2px solid var(--color-accent);
 }

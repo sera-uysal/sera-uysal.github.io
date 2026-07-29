@@ -14,7 +14,7 @@ export interface Position {
 const work: Position[] = [
   {
     name: 'Ministry of Treasury and Finance of Türkiye',
-    position: 'Senior Treasury Associate',
+    position: 'Treasury Associate',
     url: 'https://en.hmb.gov.tr',
     startDate: '2018-06-01',
     endDate: '2022-09-01',

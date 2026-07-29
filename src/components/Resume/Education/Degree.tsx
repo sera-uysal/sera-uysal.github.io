@@ -1,10 +1,22 @@
-import type { Degree as DegreeType } from '@/data/resume/degrees';
+import {Degree as DegreeType, Month, MONTHS} from '@/data/resume/degrees';
 
 interface DegreeProps {
   data: DegreeType;
 }
 
+function formatDate(year: number, month?: Month) {
+    if (!month) {
+        return { label: String(year), dateTime: String(year) };
+    }
+    const monthNumber = MONTHS.indexOf(month) + 1;
+    return {
+        label: `${month} ${year}`,
+        dateTime: `${year}-${String(monthNumber).padStart(2, '0')}`,
+    };
+}
+
 export default function Degree({ data }: DegreeProps) {
+  const { label, dateTime } = formatDate(data.year, data.month);
   return (
     <article className="degree-container" style={{ marginBottom: '1.5rem' }}>
       <header>
@@ -15,7 +27,7 @@ export default function Degree({ data }: DegreeProps) {
           <a href={data.link} target="_blank" rel="noreferrer">
             {data.school}
           </a>
-          , <time dateTime={String(data.year)}>{data.year}</time>
+          , <time dateTime={dateTime}>{label}</time>
         </p>
       </header>
 

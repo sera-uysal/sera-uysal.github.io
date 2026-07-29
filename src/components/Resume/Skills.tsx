@@ -74,7 +74,6 @@ export default function Skills({ skills, categories }: SkillsProps) {
   const groupedSkills = useMemo(() => {
     // Sort skills by competency (highest first), then alphabetically
     const sortedSkills = [...skills].sort((a, b) => {
-      if (a.competency !== b.competency) return b.competency - a.competency;
       return a.title.localeCompare(b.title);
     });
 

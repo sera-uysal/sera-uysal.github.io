@@ -1,6 +1,5 @@
 export interface Skill {
   title: string;
-  competency: number;
   category: string[];
 }
 
@@ -13,25 +12,26 @@ export interface Category {
 
 const skills: Skill[] = [
   // Tools & Technical
-  { title: 'Excel', competency: 4, category: ['Tools & Technical'] },
-  { title: 'R', competency: 4, category: ['Tools & Technical'] },
-  { title: 'Power BI', competency: 4, category: ['Tools & Technical'] },
-  { title: 'Python', competency: 4, category: ['Tools & Technical'] },
-  { title: 'SQL', competency: 4, category: ['Tools & Technical'] },
+  { title: 'Excel', category: ['Tools & Technical'] },
+  { title: 'R', category: ['Tools & Technical'] },
+  { title: 'Power BI', category: ['Tools & Technical'] },
+  { title: 'Tableau', category: ['Tools & Technical'] },
+  { title: 'Python', category: ['Tools & Technical'] },
+  { title: 'SQL', category: ['Tools & Technical'] },
 
   // Finance & Analytics
-  { title: 'Econometrics', competency: 4, category: ['Finance & Analytics'] },
-  { title: 'Data Analysis', competency: 4, category: ['Finance & Analytics'] },
-  { title: 'Financial Regulation & Policy', competency: 4, category: ['Finance & Analytics'] },
-  { title: 'Financial Analysis & Reporting', competency: 4, category: ['Finance & Analytics'] },
-  { title: 'Contract Management', competency: 4, category: ['Finance & Analytics'] },
-  { title: 'Budgeting & Forecasting', competency: 4, category: ['Finance & Analytics'] },
-  { title: 'Financial Modeling', competency: 4, category: ['Finance & Analytics'] },
+  { title: 'Econometrics', category: ['Finance & Analytics'] },
+  { title: 'Data Analysis', category: ['Finance & Analytics'] },
+  { title: 'Financial Regulation & Policy', category: ['Finance & Analytics'] },
+  { title: 'Financial Analysis & Reporting', category: ['Finance & Analytics'] },
+  { title: 'Contract Management', category: ['Finance & Analytics'] },
+  { title: 'Budgeting & Forecasting', category: ['Finance & Analytics'] },
+  { title: 'Financial Modeling', category: ['Finance & Analytics'] },
 
   // Languages
-  { title: 'Turkish (Native)', competency: 4, category: ['Languages'] },
-  { title: 'English (C1)', competency: 4, category: ['Languages'] },
-  { title: 'German (C1.2)', competency: 4, category: ['Languages'] },
+  { title: 'Turkish (Native)', category: ['Languages'] },
+  { title: 'English (C1)', category: ['Languages'] },
+  { title: 'German (DSH-3/C1.2)', category: ['Languages'] },
 ];
 
 /**
